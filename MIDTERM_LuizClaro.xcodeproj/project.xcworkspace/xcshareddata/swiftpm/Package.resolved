@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DateGrid",
+        "repositoryURL": "https://github.com/yodagamaheshan/DateGrid.git",
+        "state": {
+          "branch": null,
+          "revision": "68378c8276f2d57569fa492188e1d098ea56869b",
+          "version": "0.0.3"
+        }
+      },
+      {
+        "package": "LoremSwiftum",
+        "repositoryURL": "https://github.com/lukaskubanek/LoremSwiftum",
+        "state": {
+          "branch": "master",
+          "revision": "8942e732e50458cde5dccf9996afa16f29372853",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
