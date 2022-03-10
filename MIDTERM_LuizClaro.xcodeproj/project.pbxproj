@@ -13,6 +13,20 @@
 		259E49AD27D811ED00FF4043 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259E49AC27D811ED00FF4043 /* Preview Assets.xcassets */; };
 		259E49AF27D811ED00FF4043 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49AE27D811ED00FF4043 /* Persistence.swift */; };
 		259E49B227D811ED00FF4043 /* MIDTERM_LuizClaro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 259E49B027D811ED00FF4043 /* MIDTERM_LuizClaro.xcdatamodeld */; };
+		259E49BB27D8124300FF4043 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49BA27D8124300FF4043 /* LaunchView.swift */; };
+		259E49BF27D8127C00FF4043 /* ScaleFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49BE27D8127C00FF4043 /* ScaleFactor.swift */; };
+		259E49E227D83CF700FF4043 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49E127D83CF700FF4043 /* TutorialView.swift */; };
+		259E49E527D8566E00FF4043 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 259E49E427D8566E00FF4043 /* LoremSwiftum */; };
+		259E49E927D8589300FF4043 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49E827D8589300FF4043 /* ToDoView.swift */; };
+		259E49EB27D858C000FF4043 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49EA27D858C000FF4043 /* FinanceView.swift */; };
+		259E49ED27D858D400FF4043 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49EC27D858D400FF4043 /* SettingsView.swift */; };
+		259E49F027D9176100FF4043 /* DateGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 259E49EF27D9176100FF4043 /* DateGrid */; };
+		259E49F227D9178400FF4043 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49F127D9178400FF4043 /* CalendarView.swift */; };
+		259E49F427D96B9700FF4043 /* CalendarComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49F327D96B9700FF4043 /* CalendarComponentView.swift */; };
+		259E49F627D9955500FF4043 /* MainGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49F527D9955500FF4043 /* MainGradient.swift */; };
+		259E49FA27D9A3AA00FF4043 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E49F927D9A3AA00FF4043 /* CoreDataService.swift */; };
+		259E4A2427D9A8E800FF4043 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E4A2327D9A8E800FF4043 /* AddEventView.swift */; };
+		259E4A2627D9E40E00FF4043 /* EventComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E4A2527D9E40D00FF4043 /* EventComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +37,18 @@
 		259E49AC27D811ED00FF4043 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		259E49AE27D811ED00FF4043 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		259E49B127D811ED00FF4043 /* MIDTERM_LuizClaro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MIDTERM_LuizClaro.xcdatamodel; sourceTree = "<group>"; };
+		259E49BA27D8124300FF4043 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		259E49BE27D8127C00FF4043 /* ScaleFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleFactor.swift; sourceTree = "<group>"; };
+		259E49E127D83CF700FF4043 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		259E49E827D8589300FF4043 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
+		259E49EA27D858C000FF4043 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		259E49EC27D858D400FF4043 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		259E49F127D9178400FF4043 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		259E49F327D96B9700FF4043 /* CalendarComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarComponentView.swift; sourceTree = "<group>"; };
+		259E49F527D9955500FF4043 /* MainGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGradient.swift; sourceTree = "<group>"; };
+		259E49F927D9A3AA00FF4043 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		259E4A2327D9A8E800FF4043 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		259E4A2527D9E40D00FF4043 /* EventComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259E49F027D9176100FF4043 /* DateGrid in Frameworks */,
+				259E49E527D8566E00FF4043 /* LoremSwiftum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				259E49A527D811EB00FF4043 /* MIDTERM_LuizClaroApp.swift */,
-				259E49A727D811EB00FF4043 /* ContentView.swift */,
+				259E49BD27D8126900FF4043 /* Models */,
+				259E49BC27D8124D00FF4043 /* Views */,
+				259E49F827D9A37F00FF4043 /* Services */,
 				259E49A927D811ED00FF4043 /* Assets.xcassets */,
-				259E49AE27D811ED00FF4043 /* Persistence.swift */,
 				259E49B027D811ED00FF4043 /* MIDTERM_LuizClaro.xcdatamodeld */,
 				259E49AB27D811ED00FF4043 /* Preview Content */,
 			);
@@ -71,6 +100,49 @@
 				259E49AC27D811ED00FF4043 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		259E49BC27D8124D00FF4043 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				259E49F727D9973B00FF4043 /* Components */,
+				259E49A727D811EB00FF4043 /* ContentView.swift */,
+				259E49BA27D8124300FF4043 /* LaunchView.swift */,
+				259E49E127D83CF700FF4043 /* TutorialView.swift */,
+				259E49E827D8589300FF4043 /* ToDoView.swift */,
+				259E49EA27D858C000FF4043 /* FinanceView.swift */,
+				259E49EC27D858D400FF4043 /* SettingsView.swift */,
+				259E49F127D9178400FF4043 /* CalendarView.swift */,
+				259E4A2327D9A8E800FF4043 /* AddEventView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		259E49BD27D8126900FF4043 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				259E49BE27D8127C00FF4043 /* ScaleFactor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		259E49F727D9973B00FF4043 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				259E49F327D96B9700FF4043 /* CalendarComponentView.swift */,
+				259E49F527D9955500FF4043 /* MainGradient.swift */,
+				259E4A2527D9E40D00FF4043 /* EventComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		259E49F827D9A37F00FF4043 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				259E49F927D9A3AA00FF4043 /* CoreDataService.swift */,
+				259E49AE27D811ED00FF4043 /* Persistence.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +161,10 @@
 			dependencies = (
 			);
 			name = MIDTERM_LuizClaro;
+			packageProductDependencies = (
+				259E49E427D8566E00FF4043 /* LoremSwiftum */,
+				259E49EF27D9176100FF4043 /* DateGrid */,
+			);
 			productName = MIDTERM_LuizClaro;
 			productReference = 259E49A227D811EB00FF4043 /* MIDTERM_LuizClaro.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +193,10 @@
 				Base,
 			);
 			mainGroup = 259E499927D811EB00FF4043;
+			packageReferences = (
+				259E49E327D8566D00FF4043 /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
+				259E49EE27D9176000FF4043 /* XCRemoteSwiftPackageReference "DateGrid" */,
+			);
 			productRefGroup = 259E49A327D811EB00FF4043 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +223,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259E49FA27D9A3AA00FF4043 /* CoreDataService.swift in Sources */,
+				259E49E227D83CF700FF4043 /* TutorialView.swift in Sources */,
 				259E49B227D811ED00FF4043 /* MIDTERM_LuizClaro.xcdatamodeld in Sources */,
+				259E49F227D9178400FF4043 /* CalendarView.swift in Sources */,
+				259E4A2627D9E40E00FF4043 /* EventComponent.swift in Sources */,
+				259E49EB27D858C000FF4043 /* FinanceView.swift in Sources */,
+				259E49BB27D8124300FF4043 /* LaunchView.swift in Sources */,
 				259E49AF27D811ED00FF4043 /* Persistence.swift in Sources */,
+				259E49F427D96B9700FF4043 /* CalendarComponentView.swift in Sources */,
+				259E49BF27D8127C00FF4043 /* ScaleFactor.swift in Sources */,
 				259E49A827D811EB00FF4043 /* ContentView.swift in Sources */,
+				259E4A2427D9A8E800FF4043 /* AddEventView.swift in Sources */,
+				259E49E927D8589300FF4043 /* ToDoView.swift in Sources */,
+				259E49F627D9955500FF4043 /* MainGradient.swift in Sources */,
 				259E49A627D811EB00FF4043 /* MIDTERM_LuizClaroApp.swift in Sources */,
+				259E49ED27D858D400FF4043 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +441,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		259E49E327D8566D00FF4043 /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		259E49EE27D9176000FF4043 /* XCRemoteSwiftPackageReference "DateGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yodagamaheshan/DateGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		259E49E427D8566E00FF4043 /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 259E49E327D8566D00FF4043 /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+		259E49EF27D9176100FF4043 /* DateGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 259E49EE27D9176000FF4043 /* XCRemoteSwiftPackageReference "DateGrid" */;
+			productName = DateGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		259E49B027D811ED00FF4043 /* MIDTERM_LuizClaro.xcdatamodeld */ = {
