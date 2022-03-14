@@ -18,6 +18,15 @@
           "revision": "8942e732e50458cde5dccf9996afa16f29372853",
           "version": null
         }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON",
+        "state": {
+          "branch": null,
+          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+          "version": "5.0.1"
+        }
       }
     ]
   },

@@ -17,35 +17,71 @@ struct AddEventView: View {
     @State var eventTime: String = ""
     @State var isNotificationActive: Bool = true
     @State var eventNote: String = ""
-    @State var eventColor: MainGradient = MainGradient()
     
     var body: some View {
         ZStack{
             Color("bgColor").edgesIgnoringSafeArea(.all)
             
             VStack(){
+                Group{
+                    Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
+                        Image(systemName: "chevron.backward")
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.white)
+                            .font(.title2.bold())
+                            .opacity(didScreenLoad ? 1 : 0)
+                            .rotationEffect(.degrees(didScreenLoad ? 0 : 90))
+                            .animation(.spring().delay(0.2), value: didScreenLoad)
+                    }
+                    
+                    Text("New Event").font(.largeTitle.bold())
+                        .opacity(didScreenLoad ? 1 : 0)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.bottom)
+                
+                Spacer()
+                
                 Group {
                     Text("Event Name")
                         .font(.body).foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    TextField("", text: $eventName).background(gradientTextField).cornerRadius(10)
+                        .padding(.horizontal)
+                    TextField("", text: $eventName)
+                        .frame(height: sf.h * 0.07)
+                        .padding(.horizontal)
+                        .background(gradientTextField)
+                        .cornerRadius(10)
+                        .offset(x: didScreenLoad ? 0 : -sf.w)
+                        .animation(.ripple(index: 1).delay(0.4), value: didScreenLoad)
                     
                     Spacer()
                     
                     Text("Details")
                         .font(.body).foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
                     HStack{
                         HStack {
                             Image(systemName: "calendar.circle").font(.body)
                             TextField("Select Date", text: $eventDay)
-                        }.background(gradientTextField).cornerRadius(10)
+                        }
+                        .frame(height: sf.h * 0.07)
+                        .padding(.horizontal)
+                        .background(gradientTextField)
+                        .cornerRadius(10)
                         Spacer()
                         HStack {
                             Image(systemName: "clock").font(.body)
                             TextField("Select Time", text: $eventTime)
-                        }.background(gradientTextField).cornerRadius(10)
+                        }
+                        .frame(height: sf.h * 0.07)
+                        .padding(.horizontal)
+                        .background(gradientTextField)
+                        .cornerRadius(10)
                     }
+                    .offset(x: didScreenLoad ? 0 : -sf.w)
+                    .animation(.ripple(index: 2).delay(0.4), value: didScreenLoad)
                 }
                 
                 Group{
@@ -54,6 +90,7 @@ struct AddEventView: View {
                     Text("Notification")
                         .font(.body).foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
                     HStack {
                         if(isNotificationActive){
                             Text("Active")
@@ -61,48 +98,72 @@ struct AddEventView: View {
                             Text("Deactivated")
                         }
                         Spacer()
+                        
                         Toggle("", isOn: $isNotificationActive)
-                    }.background(gradientTextField).cornerRadius(10)
+                    }
+                    .frame(height: sf.h * 0.07)
+                    .padding(.horizontal)
+                    .background(gradientTextField)
+                    .cornerRadius(10)
+                    .offset(x: didScreenLoad ? 0 : -sf.w)
+                    .animation(.ripple(index: 3).delay(0.4), value: didScreenLoad)
                     
                     Spacer()
                     
                     Text("Notes")
                         .font(.body).foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
                     TextEditor(text: $eventNote)
-                        .background(gradientTextField).cornerRadius(10)
+                        .onAppear(perform: {
+                            UITextView.appearance().backgroundColor = .clear
+                        })
+                        .frame(height: sf.h * 0.2)
+                        .padding(.horizontal)
+                        .background(gradientTextField)
+                        .cornerRadius(10)
+                        .offset(x: didScreenLoad ? 0 : -sf.w)
+                        .animation(.ripple(index: 4).delay(0.4), value: didScreenLoad)
                     
                     Spacer()
                 }
-                
+                Spacer()
                 
                 Text("Select Color")
                     .font(.body).foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
                 HStack{
                     ZStack{
                         Circle().fill(Color("darkBlue")).frame(width: sf.w * 0.1)
                         Circle()
-                            .fill(LinearGradient(
-                                colors: [Color("purpleBlue"), Color("bloodOrange")],
-                                startPoint: .top,
-                                endPoint: .bottom
-                            )).frame(width: sf.w * 0.05)
+                            .fill(gradientOne)
+                            .frame(width: sf.w * 0.05)
                     }
                     ZStack{
                         Circle().fill(Color("darkBlue")).frame(width: sf.w * 0.1)
                         Circle()
-                            .fill(LinearGradient(
-                                colors: [Color("yellow"), Color("bloodOrange")],
-                                startPoint: .top,
-                                endPoint: .bottom
-                            )).frame(width: sf.w * 0.05)
+                            .fill(gradientTwo)
+                            .frame(width: sf.w * 0.05)
+                    }
+                    ZStack{
+                        Circle().fill(Color("darkBlue")).frame(width: sf.w * 0.1)
+                        Circle()
+                            .fill(gradientThree)
+                            .frame(width: sf.w * 0.05)
+                    }
+                    ZStack{
+                        Circle().fill(Color("darkBlue")).frame(width: sf.w * 0.1)
+                        Image(systemName: "plus").frame(width: sf.w * 0.05)
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .offset(x: didScreenLoad ? 0 : -sf.w)
+                .animation(.ripple(index: 5).delay(0.4), value: didScreenLoad)
                 
                 Spacer()
                 
-                Button("Continue") {
+                Button("Create Event") {
                     presentationMode.wrappedValue.dismiss()
                 }
                 .padding()
@@ -118,25 +179,10 @@ struct AddEventView: View {
         }
         .frame(width: sf.w)
         .foregroundColor(.white)
-        .navigationTitle("New Event")
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
-                    Image(systemName: "chevron.backward")
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(.white)
-                        .font(.title2.bold())
-                        .opacity(didScreenLoad ? 1 : 0)
-                        .rotationEffect(.degrees(didScreenLoad ? 0 : 90))
-                        .animation(.spring().delay(0.2), value: didScreenLoad)
-                }
-            }
-        }
+        .navigationBarHidden(true)
         .onAppear {
             didScreenLoad.toggle()
         }
-        
     }
 }
 

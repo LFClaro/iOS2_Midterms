@@ -1,0 +1,72 @@
+[
+  {
+    "id": 0,
+    "name": "John Doe",
+    "isIncoming": true,
+    "amount": 10.00,
+    "date": "2022-03-13T11:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Amazon",
+    "isIncoming": false,
+    "amount": 25.00,
+    "date": "2022-03-13T11:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Ikea",
+    "isIncoming": false,
+    "amount": 150.00,
+    "date": "2022-03-13T11:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "McDonalds NYC",
+    "isIncoming": false,
+    "amount": 15.00,
+    "date": "2022-03-13T11:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Humber",
+    "isIncoming": true,
+    "amount": 3000.00,
+    "date": "2022-02-13T11:00:00Z"
+  },
+  {
+    "id": 6,
+    "name": "Jane Doe",
+    "isIncoming": true,
+    "amount": 50.00,
+    "date": "2022-02-13T11:00:00Z"
+  },
+  {
+    "id": 7,
+    "name": "Starbucks",
+    "isIncoming": false,
+    "amount": 25.00,
+    "date": "2022-02-13T11:00:00Z"
+  },
+  {
+    "id": 8,
+    "name": "CostCo",
+    "isIncoming": false,
+    "amount": 400.00,
+    "date": "2022-02-13T11:00:00Z"
+  },
+  {
+    "id": 9,
+    "name": "Harvey's",
+    "isIncoming": false,
+    "amount": 12.00,
+    "date": "2022-02-13T11:00:00Z"
+  },
+  {
+    "id": 10,
+    "name": "Apple Store",
+    "isIncoming": false,
+    "amount": 2600.00,
+    "date": "2022-01-13T11:00:00Z"
+  },
+]

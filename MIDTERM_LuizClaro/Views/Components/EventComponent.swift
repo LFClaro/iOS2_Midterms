@@ -9,15 +9,15 @@ import SwiftUI
 import LoremSwiftum
 
 struct EventComponent: View {
-    var gradient = MainGradient()
+    var gradient: LinearGradient
     var sentences = 1
     var cardHeight = sf.h * 0.2
     var y = sf.h * 0.2
     
     var body: some View {
-        Group{
-            ZStack(){
-                Color("darkBlue")
+        Rectangle()
+            .fill(Color("darkBlue"))
+            .overlay(
                 HStack{
                     VStack(alignment: .leading){
                         Text(Lorem.words(2)).font(.headline)
@@ -27,18 +27,18 @@ struct EventComponent: View {
                     }
                     .padding(.horizontal)
                     Spacer()
-                    gradient.frame(width: 5)
+                    gradient.frame(width: 8)
                 }
-            }
-        }
-        .frame(width: sf.w * 0.7, height: cardHeight)
-        .position(x: sf.w * 0.55, y: y)
-        .clipShape(RoundedRectangle(cornerRadius: 25))
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .frame(width: sf.w * 0.7, height: cardHeight)
+            .position(x: sf.w * 0.55, y: y)
+            .foregroundColor(.white)
     }
 }
 
 struct EventComponent_Previews: PreviewProvider {
     static var previews: some View {
-        EventComponent()
+        EventComponent(gradient: gradientOne)
     }
 }

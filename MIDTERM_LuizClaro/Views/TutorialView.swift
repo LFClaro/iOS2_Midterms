@@ -71,9 +71,11 @@ struct TabTwo: View {
         ZStack {
             Color("bgColor").edgesIgnoringSafeArea(.all)
             VStack{
-                PhoneView().frame(height: sf.h * 0.5)
+                PhoneViewNotification().frame(height: sf.h * 0.5)
                 
-                Text(Lorem.words(3)).font(.title.bold())
+                Image("notIcon")
+                    .resizable().scaledToFit().frame(maxHeight: sf.h * 0.07)
+                Text("Enable Notifications").font(.title.bold())
                 Text(Lorem.sentence).font(.caption)
             }
         }
@@ -117,6 +119,30 @@ struct PhoneView: View{
                 }
                 .position(x: geoSF.w * 0.55, y: geoSF.h * 0.28)
             }
+        }
+        .onAppear {
+            withAnimation(.spring(dampingFraction: 0.5)) {
+                screenLoad = true
+            }
+            imageLoad = true
+        }
+    }
+}
+
+struct PhoneViewNotification: View{
+    @State private var screenLoad: Bool = false
+    @State private var imageLoad: Bool = false
+    
+    var body: some View{
+        GeometryReader { geo in
+            let geoSF = ScaleFactor(w: geo.size.width, h: geo.size.height)
+            ZStack(alignment: .center){
+                Image("phone").resizable().scaledToFit().frame(width: geoSF.w * 0.5)
+                    .opacity(screenLoad ? 1 : 0)
+                Image("notifications").resizable().scaledToFit().frame(width: geoSF.w * 0.6).offset(y: geoSF.h * -0.1)
+                    .scaleEffect(screenLoad ? 1 : 0)
+            }
+            .position(x: sf.w * 0.5, y: sf.h * 0.25)
         }
         .onAppear {
             withAnimation(.spring(dampingFraction: 0.5)) {

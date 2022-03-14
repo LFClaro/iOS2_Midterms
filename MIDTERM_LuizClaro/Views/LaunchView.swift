@@ -21,26 +21,20 @@ struct LaunchView: View {
             
             VStack(spacing: 0){
                 Image("check")
-                    .resizable()
-                    .scaledToFit()
-                    .scaleEffect(isCounting ? 1.0 : 0.5)
-                    .animation(.spring().speed(0.2), value: isCounting)
+                    .rotationEffect(.degrees(isCounting ? 1440 : 0))
+                    .animation(.spring(dampingFraction: 0.7).speed(0.5), value: isCounting)
                 Image("organize")
-                    .resizable()
-                    .scaledToFit()
                     .opacity(isCounting ? 1.0 : 0)
                     .animation(.easeInOut(duration: 2), value: isCounting)
-                    .offset(y: -50)
+                    .offset(y: sf.h * -0.03)
             }
-            .frame(width: sf.w * 0.5, height: sf.h * 0.5, alignment: .center)
+            .scaleEffect(1.5)
             .position(x: sf.w * 0.5, y: sf.h * 0.4)
             .onAppear {
                 isCounting.toggle()
             }
-
-            
         }.onReceive(timer , perform: { _ in
-            withAnimation(.default){
+            withAnimation(.easeInOut){
                 let lastIndex = 10
                 if counter == lastIndex{
                     counter = 0
@@ -53,6 +47,7 @@ struct LaunchView: View {
                 }
             }
         })
+            .statusBar(hidden: true)
     }
 }
 

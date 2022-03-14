@@ -9,9 +9,13 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State var showInfoModalView: Bool = true
-    
+    @Environment(\.scenePhase) var scenePhase
     @Environment(\.managedObjectContext) private var viewContext
+    
+    @State var showInfoModalView: Bool = false
+    @State var appearCount: Int = 0
+    
+    @State var chosenCalendar = Calendar(identifier: .gregorian)
     
     init(){
         UITabBar.appearance().backgroundColor = UIColor.dark
@@ -23,15 +27,15 @@ struct ContentView: View {
     
     var body: some View {
         TabView{
-            CalendarView(calendar: Calendar(identifier: .gregorian))
+            CalendarView(calendar: chosenCalendar)
                 .tabItem{
                     Label("Calendar", systemImage: "calendar")
                 }
-            ToDoView()
+            ToDoView(calendar: chosenCalendar)
                 .tabItem{
                     Label("ToDo List", systemImage: "checkmark.circle.fill")
                 }
-            FinanceView()
+            FinanceView(calendar: chosenCalendar)
                 .tabItem{
                     Label("Finance", systemImage: "chart.bar.xaxis")
                 }
@@ -40,12 +44,28 @@ struct ContentView: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
+        .onAppear(perform: {
+            onLoad()
+        })
+        .sheet(isPresented: $showInfoModalView) {
+            TutorialView()
+        }
         .accentColor(.white)
         .foregroundColor(.white)
-//        .sheet(isPresented: $showInfoModalView) {
-//            TutorialView()
-//        }
-        
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+    }
+    
+    // Prevent TutorialView from showing more than once
+    func onLoad() {
+        if appearCount == 0 {
+            showInfoModalView = true
+        } else {
+            showInfoModalView = false
+        }
+        if showInfoModalView {
+            appearCount += 1
+        }
     }
 }
 

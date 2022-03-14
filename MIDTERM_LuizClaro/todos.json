@@ -1,0 +1,110 @@
+[
+  {
+    "id": 0,
+    "name": "Daily Meeting with the team",
+    "category": "Work",
+    "date": "2022-03-13T11:00:00Z",
+    "note": "",
+    "smiley": ":)",
+    "completed": false
+  },
+  {
+    "id": 1,
+    "name": "Completing the prototype",
+    "category": "Work",
+    "date": "2022-03-13T11:07:19Z",
+    "note": "So much fun!",
+    "smiley": "",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "name": "Find people for the user test",
+    "category": "Work",
+    "date": "2022-03-13T11:07:19Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "name": "Buy cookies for the kids",
+    "category": "Family",
+    "date": "2022-03-13T11:27:19Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "name": "Pay electricity bill",
+    "category": "Urgent",
+    "date": "2022-03-13T10:07:19Z",
+    "note": "So expensive!",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "name": "Daily Meeting with the team",
+    "category": "Work",
+    "date": "2022-03-14T11:00:00Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 6,
+    "name": "Daily Meeting with the team",
+    "category": "Work",
+    "date": "2022-03-15T11:00:00Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 7,
+    "name": "Daily Meeting with the team",
+    "category": "Work",
+    "date": "2022-03-16T11:00:00Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 8,
+    "name": "Daily Meeting with the team",
+    "category": "Work",
+    "date": "2022-03-17T11:00:00Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 9,
+    "name": "Buy cookies for the kids",
+    "category": "Family",
+    "date": "2022-03-14T11:27:19Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 10,
+    "name": "Buy cookies for the kids",
+    "category": "Family",
+    "date": "2022-03-15T11:27:19Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  },
+  {
+    "id": 11,
+    "name": "Buy cookies for the kids",
+    "category": "Family",
+    "date": "2022-03-16T11:27:19Z",
+    "note": "",
+    "smiley": "",
+    "completed": false
+  }
+]
